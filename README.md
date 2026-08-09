@@ -20,3 +20,12 @@ El cilco se vuelve infinito.
 
 ¿Cómo lo prevendrías en este caso?
 Dándole un límite al bucle, mientras una condición se cumpla
+
+Pregunta: ¿Por qué do-while es más apropiado que while aquí? Por que, primero vaida que exista un monto y luego ejecuta la condición.
+
+Describe con tus palabras la diferencia en
+el orden de ejecución:
+
+Do while = primero valida que la información exista, luego pregunta y ejecuta.
+
+While = primero pregunta, luego valida y ejecuta
