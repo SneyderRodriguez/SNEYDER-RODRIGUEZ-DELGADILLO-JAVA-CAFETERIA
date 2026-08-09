@@ -10,6 +10,16 @@ public class Cafeteria {
         final double DESCUENTO = 0.10;
         double descuento = 0;
         int invBrownie = 10;
+        double montoApertura = 0;
+        int pedidosProcesados = 0;
+        double totalRecaudado = 0;
+        int pedidoMayor = 0;
+        double mayorValor = 0;
+        do {
+            System.out.println("El monto debe ser mayor a $0");
+            montoApertura = 20000;
+        }while (montoApertura<=0);
+
         for (int i=0; i< pedidoProducto.length; i++){
             System.out.println(nombres[pedidoProducto[i]] + " Categoria-" + categorias[pedidoProducto[i]]);
             switch (categorias[pedidoProducto[i]]) {
@@ -35,6 +45,7 @@ public class Cafeteria {
             if (pedidoProducto[i] == 4){
                 invBrownie -= pedidoCantidad[i];
                 System.out.println("Brownies disponibles: " + invBrownie);
+
             }
             subTotal=precios[pedidoProducto[i]] * pedidoCantidad[i];
             total = subTotal;
@@ -46,6 +57,15 @@ public class Cafeteria {
                 System.out.println("Descuento no aplicado");
             }
             System.out.println("Total: $" + total);
+            pedidosProcesados++;
+            totalRecaudado +=total;
+            if (total>mayorValor){
+                mayorValor = total;
+                pedidoMayor = i+1;
+            }
         }
+        System.out.println("Total de pedidos: " + pedidosProcesados);
+        System.out.println("Total recaudado: " + totalRecaudado);
+        System.out.println("Mayor venta: " + pedidoMayor +" por valor de: $" + mayorValor);
     }
 }
