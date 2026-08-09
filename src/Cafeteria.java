@@ -9,6 +9,7 @@ public class Cafeteria {
         double total;
         final double DESCUENTO = 0.10;
         double descuento = 0;
+        int invBrownie = 10;
         for (int i=0; i< pedidoProducto.length; i++){
             System.out.println(nombres[pedidoProducto[i]] + " Categoria-" + categorias[pedidoProducto[i]]);
             switch (categorias[pedidoProducto[i]]) {
@@ -26,6 +27,14 @@ public class Cafeteria {
                     break;
                 default:
                     System.out.println("Categoría desconocida");
+            }
+            if (pedidoProducto[i] == 4 && pedidoCantidad[i] > invBrownie){
+                System.out.println("Producto agotado");
+                continue;
+            }
+            if (pedidoProducto[i] == 4){
+                invBrownie -= pedidoCantidad[i];
+                System.out.println("Brownies disponibles: " + invBrownie);
             }
             subTotal=precios[pedidoProducto[i]] * pedidoCantidad[i];
             total = subTotal;
