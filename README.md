@@ -39,3 +39,13 @@ Pregunta:
 ¿Por qué usas for aquí y no while? por que el ciclo for es ideal para recorrer posiciones de un array.
 
 ¿Qué tiene el for que lo hace más conveniente cuando conoces el número de elementos? Su estructura de declaración
+
+Pregunta:
+¿Cuántos errores encontraste? 
+Encontre 3
+
+Clasifica cada uno: ¿es un error de compilación o un error
+lógico? 2 de compilación y 1 de lógica;
+
+¿Cómo los distingues? Los errores de compilación los detecta el IDE antes de ejecutar/compilar el código, es decir los marca con una pequeña linea roja.
+El lógico no genera un error que el IDE pueda detectar, para él esta escrito correctamente.
