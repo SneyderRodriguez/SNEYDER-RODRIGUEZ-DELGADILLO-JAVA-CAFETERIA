@@ -5,7 +5,10 @@ public class Cafeteria {
         char[] categorias = {'B', 'B', 'F', 'C', 'P'};
         int[] pedidoProducto ={0,2,1,4,0,3};
         int[] pedidoCantidad = {2,1,3,1,1,2};
-
+        double subTotal;
+        double total;
+        final double DESCUENTO = 0.10;
+        double descuento = 0;
         for (int i=0; i< pedidoProducto.length; i++){
             System.out.println(nombres[pedidoProducto[i]] + " Categoria-" + categorias[pedidoProducto[i]]);
             switch (categorias[pedidoProducto[i]]) {
@@ -24,6 +27,16 @@ public class Cafeteria {
                 default:
                     System.out.println("Categoría desconocida");
             }
+            subTotal=precios[pedidoProducto[i]] * pedidoCantidad[i];
+            total = subTotal;
+            if (subTotal>12000){
+                descuento = subTotal * DESCUENTO;
+                total = subTotal - descuento;
+                System.out.println("Descuento aplicado: $" + descuento);
+            }else {
+                System.out.println("Descuento no aplicado");
+            }
+            System.out.println("Total: $" + total);
         }
     }
 }
