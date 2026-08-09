@@ -17,7 +17,7 @@ public class Cafeteria {
         double mayorValor = 0;
         do {
             System.out.println("El monto debe ser mayor a $0");
-            montoApertura = 20000;
+            montoApertura = 50000;
         }while (montoApertura<=0);
 
         for (int i=0; i< pedidoProducto.length; i++){
